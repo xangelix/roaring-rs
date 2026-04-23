@@ -16,8 +16,12 @@ mod iter;
 mod ops;
 #[cfg(feature = "std")]
 mod ops_with_serialized;
+
+#[cfg(feature = "rkyv")]
+pub mod rkyv;
 #[cfg(feature = "serde")]
 mod serde;
+
 #[cfg(feature = "std")]
 mod serialization;
 

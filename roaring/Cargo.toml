@@ -20,10 +20,12 @@ license = "MIT OR Apache-2.0"
 bytemuck = { workspace = true, optional = true }
 byteorder = { workspace = true, optional = true }
 serde = { workspace = true, optional = true }
+rkyv = { version = "0.8", optional = true, features = ["alloc"] }
 
 [features]
 default = ["std"]
 serde = ["dep:serde", "std"]
+rkyv_bytecheck = ["rkyv", "rkyv/bytecheck"]
 simd = []
 std = ["dep:bytemuck", "dep:byteorder"]
 

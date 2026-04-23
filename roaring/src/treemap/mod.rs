@@ -12,8 +12,12 @@ mod cmp;
 mod inherent;
 mod iter;
 mod ops;
+
 #[cfg(feature = "serde")]
 mod serde;
+#[cfg(feature = "rkyv")]
+pub mod rkyv;
+
 #[cfg(feature = "std")]
 mod serialization;
 
